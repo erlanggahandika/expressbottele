@@ -1,4 +1,5 @@
 import express from "express";
+console.log("Router loaded");
 import upload from "../upload.js";
 import { 
     register, 
