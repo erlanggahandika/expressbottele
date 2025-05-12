@@ -6,7 +6,6 @@ import path from "path";
 import router from "./routes/routes.js";
 import cookieParser from "cookie-parser";
 import multer from "multer";
-import solona from "./routes/solanaRoutes.js";
 import './job/TelegramBot.js';
 
 import cronjob from "./job/CronJob.js";
@@ -30,7 +29,8 @@ app.use(cookieParser());
 app.use("/uploads", express.static("public/uploads"));
 app.use('/uploads/cv', express.static('public/uploads/cv'));
 app.use("/public", express.static(path.join(path.resolve(), "public")));
+
 app.use(router);
-app.use(solona);
+
 
 app.listen(process.env.PORT, () => console.log("server is running on port " + process.env.PORT));
