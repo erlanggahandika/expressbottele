@@ -29,6 +29,9 @@ app.use(cookieParser());
 app.use("/uploads", express.static("public/uploads"));
 app.use('/uploads/cv', express.static('public/uploads/cv'));
 app.use("/public", express.static(path.join(path.resolve(), "public")));
+app.get("/debug", (req, res) => {
+  res.send("API is working");
+});
 
 app.use(router);
 
