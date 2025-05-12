@@ -17,7 +17,7 @@ dotenv.config();
 
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: "https://expressbottele-production.up.railway.app",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
 }));
